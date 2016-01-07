@@ -13,7 +13,7 @@ xeno.compile(yml, function (err, sys) {
     var removed = remove(sys)
     t.notOk(removed.path, 'no path on root')
     removed.containerDefinitions.forEach(function (def) {
-      t.notOk(removed.path, 'no path on def ' + def.name)
+      t.notOk(def.specific.path, 'no path on def ' + def.name)
     })
     t.end()
   })
@@ -29,7 +29,7 @@ xeno.compile(yml, function (err, sys) {
       t.error(err)
       t.notOk(removed.path, 'no path on root')
       removed.containerDefinitions.forEach(function (def) {
-        t.notOk(removed.path, 'no path on def ' + def.name)
+        t.notOk(def.specific.path, 'no path on def ' + def.name)
       })
       t.end()
     })
