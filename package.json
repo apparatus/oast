@@ -1,0 +1,46 @@
+{
+  "name": "furnace",
+  "version": "0.0.1",
+  "description": "Build containers, for fuge",
+  "main": "furnace.js",
+  "bin": {
+    "furnace": "furnace.js"
+  },
+  "scripts": {
+    "test": "standard && tap test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apparatus/furnace.git"
+  },
+  "keywords": [
+    "docker",
+    "container",
+    "build"
+  ],
+  "author": "Matteo Collina <hello@matteocollina.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apparatus/furnace/issues"
+  },
+  "homepage": "https://github.com/apparatus/furnace#readme",
+  "devDependencies": {
+    "pre-commit": "^1.1.2",
+    "standard": "^5.4.1",
+    "tap": "^5.0.0"
+  },
+  "dependencies": {
+    "dockerode": "^2.2.8",
+    "fastfall": "^1.5.1",
+    "fs-access": "^1.0.0",
+    "minimist": "^1.2.0",
+    "remove-field": "^1.0.0",
+    "steed": "^1.1.2",
+    "xenotype": "^0.4.0"
+  },
+  "standard": {
+    "ignore": [
+      "fixture"
+    ]
+  }
+}
