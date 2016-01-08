@@ -1,4 +1,4 @@
-# furnace
+# oast
 [![Gitter][gitter-badge]][gitter-url][![Build Status][travis-badge]][travis-url]
 
 Build Docker containers for production, a companion for [fuge][fuge].
@@ -16,8 +16,8 @@ documentation, examples, extra testing, or new features please get in touch.
 Copyright the apparatus team 2016, Licensed under [MIT][].
 
 [apparatus team]: https://github.com/apparatus
-[travis-badge]: https://travis-ci.org/apparatus/furnace.svg
-[travis-url]: https://travis-ci.org/apparatus/furnace
+[travis-badge]: https://travis-ci.org/apparatus/oast.svg
+[travis-url]: https://travis-ci.org/apparatus/oast
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/apparatus
-[github issue]: https://github.com/apparatus/furnace/issues/new
+[github issue]: https://github.com/apparatus/oast/issues/new

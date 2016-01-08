@@ -16,9 +16,9 @@ var steps = [
   remove
 ]
 
-var furnace = fastfall(steps)
+var oast = fastfall(steps)
 
-module.exports = furnace
+module.exports = oast
 
 function start () {
   var args = minimist(process.argv.slice(2))
@@ -36,7 +36,7 @@ function start () {
     process.exit(1)
   }
 
-  furnace(yml, function (err, sys) {
+  oast(yml, function (err, sys) {
     if (err) {
       console.error(err.message)
       process.exit(1)

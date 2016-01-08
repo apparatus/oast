@@ -1,17 +1,17 @@
 {
-  "name": "furnace",
+  "name": "oast",
   "version": "0.0.1",
   "description": "Build containers, for fuge",
-  "main": "furnace.js",
+  "main": "oast.js",
   "bin": {
-    "furnace": "furnace.js"
+    "oast": "oast.js"
   },
   "scripts": {
     "test": "standard && tap test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apparatus/furnace.git"
+    "url": "git+https://github.com/apparatus/oast.git"
   },
   "keywords": [
     "docker",
@@ -21,9 +21,9 @@
   "author": "Matteo Collina <hello@matteocollina.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/apparatus/furnace/issues"
+    "url": "https://github.com/apparatus/oast/issues"
   },
-  "homepage": "https://github.com/apparatus/furnace#readme",
+  "homepage": "https://github.com/apparatus/oast#readme",
   "devDependencies": {
     "pre-commit": "^1.1.2",
     "standard": "^5.4.1",
