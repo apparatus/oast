@@ -36,6 +36,15 @@ oast -o out.sys fixture/fuge/compose-dev.yml
 
 It writes the system definition into `out.sys`
 
+### Labels
+
+It adds an [image label][docker-labels] to each built image, in the
+form of:
+
+```
+LABEL oast.commit=48ed274cc32020b3837c8e59c10033480376208c
+```
+
 ## API
 
 __oast__ can be used as a module as well.
@@ -137,3 +146,4 @@ Copyright the apparatus team 2016, Licensed under [MIT][].
 [gitter-url]: https://gitter.im/apparatus
 [github issue]: https://github.com/apparatus/oast/issues/new
 [MIT]: ./LICENSE
+[docker-labels]: https://docs.docker.com/engine/userguide/labels-custom-metadata/
