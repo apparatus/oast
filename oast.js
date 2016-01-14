@@ -9,7 +9,8 @@ var path = require('path')
 var remove = require('./lib/remove')
 var addCommits = require('./lib/addCommits')
 var build = require('./lib/build')
-var steed = require('steed')
+var labels = require('./lib/labels')
+var steed = require('steed')()
 var chalk = require('chalk')
 var fs = require('fs')
 
@@ -20,9 +21,11 @@ function oast (sys, out, cb) {
     },
     xeno.compile,
     addCommits,
+    labels.addAll,
     function (sys, cb) {
       build(sys, out, cb)
     },
+    labels.rmAll,
     remove
   ], cb)
 }
@@ -37,7 +40,7 @@ function start () {
     }
   })
 
-  if (args.help) {
+  if (args.help || !args._[0]) {
     console.error(fs.readFileSync(path.join(__dirname, 'help.txt'), 'utf8'))
     process.exit(1)
   }
