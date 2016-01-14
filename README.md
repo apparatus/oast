@@ -136,3 +136,4 @@ Copyright the apparatus team 2016, Licensed under [MIT][].
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/apparatus
 [github issue]: https://github.com/apparatus/oast/issues/new
+[MIT]: ./LICENSE
