@@ -12,7 +12,6 @@ var build = require('./lib/build')
 var steed = require('steed')
 var chalk = require('chalk')
 var fs = require('fs')
-var path = require('path')
 
 function oast (sys, out, cb) {
   steed.waterfall([

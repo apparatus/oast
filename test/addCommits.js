@@ -9,7 +9,7 @@ var yml = path.join(__dirname, '..', 'fixture', 'fuge', 'compose-dev.yml')
 
 // output of
 // git log -n 1 --format=%H fixture/
-var lastSha = '9f15f8e0eba1e2548baa34aa2048d0b1461d31b7'
+var lastSha = '48ed274cc32020b3837c8e59c10033480376208c'
 
 test('adds all the commit to the sys', function (t) {
   xeno.compile(yml, function (err, sys) {
