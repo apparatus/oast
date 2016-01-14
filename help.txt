@@ -1,0 +1,5 @@
+usage: oast [opts] compose.yml
+
+available options:
+  -o [FILE], --output [FILE]    write the system to the given file
+  -h, --help                    this message
