@@ -32,7 +32,7 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "dockerode": "^2.2.8",
-    "dockerode-build": "^1.0.0",
+    "dockerode-build": "^1.1.1",
     "fastfall": "^1.5.1",
     "fs-access": "^1.0.0",
     "minimist": "^1.2.0",
