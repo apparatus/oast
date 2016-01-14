@@ -1,4 +1,4 @@
-FROM node
+FROM node:argon
 ADD ./package.json /
 RUN npm install
 ADD . /

@@ -9,10 +9,12 @@ var path = require('path')
 var fastfall = require('fastfall')
 var remove = require('./lib/remove')
 var addCommits = require('./lib/addCommits')
+var build = require('./lib/build')
 
 var steps = [
   xeno.compile,
   addCommits,
+  build,
   remove
 ]
 
