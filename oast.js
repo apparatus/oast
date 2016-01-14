@@ -63,10 +63,10 @@ function start () {
 
     console.error(chalk.green('Build completed correctly'))
 
-    var stringified = JSON.stringify(sys, null, 2) + '\n'
+    var stringified = JSON.stringify(sys, null, 2)
     if (args.output) {
       var output = path.resolve(args.output)
-      fs.writeFile(output, stringified, function (err) {
+      fs.writeFile(output, stringified + '\n', function (err) {
         if (err) {
           console.error(chalk.red(err.message))
           process.exit(1)
