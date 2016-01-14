@@ -43,6 +43,7 @@ form of:
 
 ```
 LABEL oast.commit=48ed274cc32020b3837c8e59c10033480376208c
+LABEL oast.id=service1
 ```
 
 ## API
