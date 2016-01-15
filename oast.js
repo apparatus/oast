@@ -11,6 +11,7 @@ var addCommits = require('./lib/addCommits')
 var build = require('./lib/build')
 var labels = require('./lib/labels')
 var push = require('./lib/push')
+var genStockContainers = require('./lib/genStockContainers')
 var steed = require('steed')()
 var chalk = require('chalk')
 var fs = require('fs')
@@ -26,6 +27,7 @@ function oast (sys, out, opts, cb) {
     },
     xeno.compile,
     addCommits,
+    genStockContainers,
     labels.addAll,
     function (sys, cb) {
       build(sys, out, cb)

@@ -41,6 +41,7 @@
     "remove-field": "^1.0.0",
     "steed": "^1.1.2",
     "through2": "^2.0.0",
+    "tmp": "0.0.28",
     "xenotype": "^0.4.0"
   },
   "standard": {
