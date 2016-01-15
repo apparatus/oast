@@ -86,7 +86,8 @@ Example `sys` passed to `cb`:
           "process": "node api/index.js"
         },
         "commit": "48ed274cc32020b3837c8e59c10033480376208c",
-        "imageId": "2d76b9cf495552ce86251182df05db83305f07f084a146bb47981f9154e84a78"
+        "imageId": "d012827054a00e50e8ae1f722ee6630cb51f6ccaf8cff6d2a2c14dea39d5e2a6",
+        "repo": "localhost:5000/fixture/frontend"
       },
       "type": "docker",
       "id": "frontend",
@@ -108,7 +109,8 @@ Example `sys` passed to `cb`:
           "process": "node service.js"
         },
         "commit": "48ed274cc32020b3837c8e59c10033480376208c",
-        "imageId": "0e3c13c2c2d9beb540dc09aa9abe5ebffa781d7f94e91d97723a08d188ed6cd4"
+        "imageId": "fa41e378a4d1da9442c8cd0fc53fa1c0e554d025437099a7a5e851bf572decb4",
+        "repo": "localhost:5000/fixture/service1"
       },
       "type": "docker",
       "id": "service1",
@@ -130,11 +132,35 @@ Example `sys` passed to `cb`:
           "process": "node service.js"
         },
         "commit": "48ed274cc32020b3837c8e59c10033480376208c",
-        "imageId": "0b081fe361bd98a583ac0e76e954a4662b77340ac1aed17708c19f731b77ec3d"
+        "imageId": "fa9e20c7fc9f074d58ce92a9b41718992fdbd26c2c74c6f55fdbac8078450df5",
+        "repo": "localhost:5000/fixture/service2"
       },
       "type": "docker",
       "id": "service2",
       "name": "service2"
+    },
+    {
+      "specific": {
+        "type": "docker",
+        "proxyPort": [
+          6379
+        ],
+        "servicePort": [
+          6379
+        ],
+        "buildScript": "echo NO BUILD SCRIPT!",
+        "execute": {
+          "image": "redis",
+          "exec": "docker run  -p 6379:6379 -e 6379=6379 redis",
+          "environment": [],
+          "process": "docker run  -p 6379:6379 -e 6379=6379 redis"
+        },
+        "imageId": "a1676b87554949959bf8b4f2b4e9a6ec0c5a8631815cbd6fde70aa4a4fabb209",
+        "repo": "localhost:5000/fixture/redis"
+      },
+      "type": "docker",
+      "id": "redis",
+      "name": "redis"
     }
   ]
 }
