@@ -37,6 +37,7 @@
     "fastfall": "^1.5.1",
     "fs-access": "^1.0.0",
     "minimist": "^1.2.0",
+    "multiline-update": "^1.0.0",
     "remove-field": "^1.0.0",
     "steed": "^1.1.2",
     "xenotype": "^0.4.0"

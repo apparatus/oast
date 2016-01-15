@@ -23,6 +23,8 @@ usage: oast [opts] compose.yml
 
 available options:
   -o [FILE], --output [FILE]    write the system to the given file
+  -r [REPO], --repo [REPO]      base URL for the registry repository to
+                                push images to
   -h, --help                    this message
 ```
 
@@ -31,10 +33,11 @@ available options:
 (from the root of this repository)
 
 ```
-oast -o out.sys fixture/fuge/compose-dev.yml
+oast -o out.sys fixture/fuge/compose-dev.yml --repo localhost:5000/fixture
 ```
 
-It writes the system definition into `out.sys`
+It writes the system definition into `out.sys`, and pushes those images
+to a [local registry](https://docs.docker.com/registry/).
 
 ### Labels
 
@@ -50,11 +53,15 @@ LABEL oast.id=service1
 
 __oast__ can be used as a module as well.
 
-### oast(yml, stream, cb(err, sys))
+### oast(yml, stream[, opts], cb(err, sys))
 
 Build the given `yml` file, and prints all output to `stream`.
 If `stream` is a TTY (e.g. stdout or stderr), docker's progress bars
 will be showed.
+
+Available options (in `opts`):
+
+* `repo`: the Docker repository we will push images to
 
 Example `sys` passed to `cb`:
 

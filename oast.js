@@ -10,12 +10,17 @@ var remove = require('./lib/remove')
 var addCommits = require('./lib/addCommits')
 var build = require('./lib/build')
 var labels = require('./lib/labels')
+var push = require('./lib/push')
 var steed = require('steed')()
 var chalk = require('chalk')
 var fs = require('fs')
 
-function oast (sys, out, cb) {
-  steed.waterfall([
+function oast (sys, out, opts, cb) {
+  if (typeof opts === 'function') {
+    cb = opts
+    opts = {}
+  }
+  var steps = [
     function (cb) {
       cb(null, sys)
     },
@@ -26,8 +31,17 @@ function oast (sys, out, cb) {
       build(sys, out, cb)
     },
     labels.rmAll,
-    remove
-  ], cb)
+    remove,
+    function (sys, cb) {
+      if (!opts.repo) {
+        cb(null, sys)
+      } else {
+        push(sys, opts.repo, out, cb)
+      }
+    }
+  ]
+
+  steed.waterfall(steps, cb)
 }
 
 module.exports = oast
@@ -36,6 +50,7 @@ function start () {
   var args = minimist(process.argv.slice(2), {
     alias: {
       'output': 'o',
+      'repo': 'r',
       'help': 'h'
     }
   })
@@ -58,7 +73,7 @@ function start () {
     process.exit(1)
   }
 
-  oast(yml, process.stderr, function (err, sys) {
+  oast(yml, process.stderr, args, function (err, sys) {
     if (err) {
       console.error(chalk.red(err.message))
       process.exit(1)
