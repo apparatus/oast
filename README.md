@@ -155,3 +155,4 @@ Copyright the apparatus team 2016, Licensed under [MIT][].
 [github issue]: https://github.com/apparatus/oast/issues/new
 [MIT]: ./LICENSE
 [docker-labels]: https://docs.docker.com/engine/userguide/labels-custom-metadata/
+[fuge]: http://fuge.io
