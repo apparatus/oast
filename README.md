@@ -2,6 +2,8 @@
 [![Gitter][gitter-badge]][gitter-url][![Build Status][travis-badge]][travis-url]
 
 Build a container-based system for production, a companion for [fuge][fuge]. Based on Docker.
+It is named after an [Oast house][oasthouse]: a building for drying hops
+as part of the brewing process. Yes, for beer :).
 
 If you're using this module, and need help, you can:
 
@@ -182,3 +184,4 @@ Copyright the apparatus team 2016, Licensed under [MIT][].
 [MIT]: ./LICENSE
 [docker-labels]: https://docs.docker.com/engine/userguide/labels-custom-metadata/
 [fuge]: http://fuge.io
+[Oast house]: https://en.wikipedia.org/wiki/Oast_house
